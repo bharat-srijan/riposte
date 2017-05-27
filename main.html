@@ -1,0 +1,1007 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Srijan Feedback App</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- load custom font -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <!-- load icon font -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- auto complete css -->
+    <link href="assets/css/easy-autocomplete.css" rel="stylesheet" type="text/css" />
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- jQuery UI Css -->
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="assets/css/materialize.css" media="screen,projection">
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <style>
+    body {
+        font-family:"Raleway", "Roboto", "Helvetica Neue", Helvetica, Arial;
+    }
+    </style>
+</head>
+
+<body>
+    <main class="main">
+    <header class="navbar-fixed main-nav">
+        <nav class="nav-extended">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Srijan Feedback App</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#"><i class="material-icons left">more_vert</i></a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="#"><i class="material-icons left">more_vert</i></a></li>
+                </ul>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">more_vert</i></a>
+            </div>
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent" id="tabs-swipe-demo">
+                    <li class="tab emp"><a href="#search"><i class="material-icons">search</i></a></li>
+                    <li class="tab"><a class="active" href="#my-feed">Share</a></li>
+                    <li class="tab"><a href="#recived-feed">Received</a></li>
+                    <li class="tab"><a href="#public-feed">#Public</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <header class="navbar-fixed emp_nav not-active">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#back" class="brand-logo back-emp"><i class="back fa fa-arrow-left"></i>Bharat Bhushan</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#"><i class="material-icons left">more_vert</i></a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="#"><i class="material-icons left">more_vert</i></a></li>
+                </ul>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">more_vert</i></a>
+            </div>
+        </nav>
+    </header>
+    <header class="navbar-fixed edit_nav not-active">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#back" class="brand-logo back-edit"><i class="back fa fa-arrow-left"></i>Edit</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li class="done"><a class="back-edit" href="#"><i class="material-icons left">done</i></a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="#"><i class="material-icons left">more_vert</i></a></li>
+                </ul>
+                <a href="#done" data-activates="mobile-demo" class="button-collapse done back-edit"><i class="material-icons">done</i></a>
+            </div>
+        </nav>
+    </header>
+    <header class="navbar-fixed share_nav not-active">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#back" class="brand-logo back-share"><i class="back fa fa-arrow-left"></i>Share</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li class="done"><a class="back-edit" href="#"><i class="material-icons left">done</i></a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="#"><i class="material-icons left">more_vert</i></a></li>
+                </ul>
+                <a href="#done" data-activates="mobile-demo" class="button-collapse done back-share"><i class="material-icons">done</i></a>
+            </div>
+        </nav>
+    </header>
+    <!-- Search Employee Content -->
+    <section class="main-section">
+        <div id="search" class="main col s12">
+            <div class="search-emp">
+                <div class="search-wrapper">
+                    <form>
+                        <div class="input-field">
+                            <input id="search" class="autocomplete" type="search" placeholder="Start typing employee name" required autocomplete="off">
+                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- List of Employees -->
+            <section class="emp-list">
+                <h3>Your recent searches</h3>
+                <ul class="collection">
+                    <li class="item">
+                        <a class="emp" href="#emp">
+                            <i class="from">GM</i>
+                            <div class="user">
+                                <span class="title">Gaurav Mishra</span>
+                                <p>5 new comments since you last visited</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a class="emp" href="#emp">
+                            <i class="from from_img"><img src="assets/images/photo.jpg"></i>
+                            <div class="user">
+                                <span class="title">Shashnak Merothiya</span>
+                                <p>2 new comments since you last visited</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a class="emp" href="#emp">
+                            <i class="from">KS</i>
+                            <div class="user">
+                                <span class="title">Kunal Soni</span>
+                                <p>Last comment yesterday</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a class="emp" href="#emp">
+                            <i class="from">RD</i>
+                            <div class="user">
+                                <span class="title">Rahul Dewan</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <!-- Share Feeds and My Given Feeds -->
+        <div id="my-feed" class="main col s12">
+            <div class="share-area" id="share_feed>
+                <form class="">
+                    <div class="share-wrapper">
+                        <textarea rows="10" id="share" class="" data-length="200"></textarea>
+                        <label for="share_feed">Give feedback <span class="for">@for</span> and <span class="mention">#mention</span></label>
+                    </div>
+                    <div class="share-controls">
+                        <div class="switch visibility">
+                            <label>
+                                <!-- Public -->
+                                <input type="checkbox">
+                                <span class="lever"></span>
+                                <!-- Private -->
+                            </label>
+                        </div>
+                        <div class="camera">
+                            <input id="camera" type="file" accept="image/*;capture=camera" />
+                            <label for="camera"><i class="fa fa-camera"></i></label>
+                        </div>
+                        <a class="waves-effect waves-light btn">Submit</a>
+                    </div>
+                </form>
+            </div>
+            <div class="feeds">
+                <!-- <h3>My comments</h3> -->
+                <div class="row">
+                    <div class="col s6 deletable">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">Today</span>
+                                    <p><a href="#emp" class="for emp">@Shash</a> sir, the crain deck looks AWESOME!! very very goog work. <span class="mention">#gaurav.mishra, #rahul.dewan</span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#"><i class="material-icons">perm_media</i></a>
+                                    <a class="share-me" href="#share-me"><i class="fa fa-group"></i>+2</a>
+                                    <a class="edit-me" href="#edit_me"><i class="material-icons">mode_edit</i></a>
+                                    <a class="waves-effect waves-light delete" href="#delete"><i class="material-icons">delete</i></a>
+                                </div>
+                                <div id="delete" class="modal">
+                                    <div class="modal-content">
+                                      <h4>Are you sure you want to delete this ?</h4>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <a href="#!" class="modal-action modal-close waves-effect btn delete-me">Delete</a>
+                                      <a href="#!" class="modal-action modal-close waves-effect btn-flat">Cancel</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="bytxt"><i class="from private">Private</i></span>
+                                    <span class="date">Yesterday</span>
+                                    <p>Excellent <a href="#emp" class="for emp">@pooja.kural</a> can we run this for some othet key landing pages as well ?</p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <!-- <a href=""><i class="fa fa-user-secret"></i></a> -->
+                                    <a class="edit-me" href="#edit_me"><i class="material-icons">mode_edit</i></a>
+                                    <a class="delete" href="#"><i class="material-icons">delete</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">2 days ago</span>
+                                    <p><a href="#emp" class="for emp">@kapil</a> You did a great work in srijan.net, keep this up keep learning and exploring more. <span class="mention">#HR, #semad, #shash, #rahul.dewan</span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#"><i class="material-icons">perm_media</i></a>
+                                    <a class="share-me" href="#share-me"><i class="fa fa-group"></i>+4</a>
+                                    <a class="edit-me" href="#edit_me"><i class="material-icons">mode_edit</i></a>
+                                    <a class="delete" href="#"><i class="material-icons">delete</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">10 days ago</span>
+                                    <p><a href="#emp" class="for emp">@Shash</a> sir, the crain deck looks AWESOME!! very very goog work. <span class="mention">#gaurav.mishra, #rahul.dewan</span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a class="share-me" href="#share-me"><i class="fa fa-group"></i>+2</a>
+                                    <a class="edit-me" href="#edit_me"><i class="material-icons">mode_edit</i></a>
+                                    <a class="delete" href="#"><i class="material-icons">delete</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="bytxt"><i class="from private">Private</i></span>
+                                    <span class="date">1 month ago</span>
+                                    <p><a href="#emp" class="for emp">@suhail</a> You are damn good in creating awesome graphics. The Drupal Camp Baltimore stickerss are looking great. </p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <!-- <a href=""><i class="fa fa-user-secret"></i></a> -->
+                                    <a class="edit-me" href="#edit_me"><i class="material-icons">mode_edit</i></a>
+                                    <a class="delete" href="#"><i class="material-icons">delete</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="bytxt"><i class="from private">Private</i></span>
+                                    <span class="date">Yesterday</span>
+                                    <p>Excellent <a href="#emp" class="for emp">@pooja.kural</a> can we run this for some othet key landing pages as well ?</p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <!-- <a href=""><i class="fa fa-user-secret"></i></a> -->
+                                    <a class="edit-me" href="#edit_me"><i class="material-icons">mode_edit</i></a>
+                                    <a class="delete" href="#"><i class="material-icons">delete</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">2 days ago</span>
+                                    <p><a href="#emp" class="for emp">@rajbir</a> you are improved in javascript. keep learning this and other frameworks. <span class="mention">#HR, #semad, #shash, #rahul.dewan</span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#"><i class="material-icons">perm_media</i></a>
+                                    <a class="share-me" href="#share-me"><i class="fa fa-group"></i>+4</a>
+                                    <a class="edit-me" href="#edit_me"><i class="material-icons">mode_edit</i></a>
+                                    <a class="delete" href="#"><i class="material-icons">delete</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">10 days ago</span>
+                                    <p><a href="#emp" class="for emp">@Shash</a> sir, the crain deck looks AWESOME!! very very goog work. <span class="mention">#gaurav.mishra, #rahul.dewan</span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a class="share-me" href="#share-me"><i class="fa fa-group"></i>+2</a>
+                                    <a class="edit-me" href="#edit_me"><i class="material-icons">mode_edit</i></a>
+                                    <a class="delete" href="#"><i class="material-icons">delete</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="bytxt"><i class="from private">Private</i></span>
+                                    <span class="date">1 month ago</span>
+                                    <p><a href="#emp" class="for emp">@Shash</a> sir, the crain deck looks AWESOME!! very very goog work.</p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <!-- <a href="#"><i class="fa fa-user-secret"></i></a> -->
+                                    <a class="edit-me" href="#edit_me"><i class="material-icons">mode_edit</i></a>
+                                    <a class="delete" href="#"><i class="material-icons">delete</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <span class="fab-btn">
+                <a href="#share_feed"><i class="fa fa-edit"></i></a>
+            </span>
+
+        </div>
+        <!-- My Received Feeds -->
+        <div id="recived-feed" class="main col s12">
+            <div class="feeds received">
+                <!-- <h3>For me</h3> -->
+                <div class="row">
+                    <div class="col s6 new">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">Today</span>
+                                    <span class="bytxt"><i class="from from_img"><img src="assets/images/photo.jpg"></i></span>
+                                    <p><a href="#emp" class="for emp">@bharat</a> sir, the crain deck looks AWESOME!! very very goog work. <span class="mention">#gaurav.mishra, #rahul.dewan</span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#"><i class="material-icons">perm_media</i></a>
+                                    <a href=""><i class="fa fa-group"></i>+2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">Yesterday</span>
+                                    <span class="bytxt"><i class="from">SJ</i></span>
+                                    <p>Excellent <a href="#emp" class="for emp">@bharat</a> can we run this for some other key landing pages as well ?<span class="mention">#semad, #HR, #admin</span></p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">2 days ago</span>
+                                    <span class="bytxt"><i class="from">SL</i></span>
+                                    <p><a href="#emp" class="for emp">@bharat</a> Srijan Feedback App design and prototype is looking good.<span class="mention">#HR, #semad, #shash, #rahul.dewan</span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#"><i class="material-icons">perm_media</i></a>
+                                    <a href=""><i class="fa fa-group"></i>+4</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">10 days ago</span>
+                                    <span class="bytxt"><i class="from from_img"><img src="assets/images/photo.jpg"></i></span>
+                                    <p><a href="#emp" class="for emp">@bharat</a> sir, the crain deck looks AWESOME!! very very goog work. <span class="mention">#gaurav.mishra, #rahul.dewan</span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">1 month ago</span>
+                                    <span class="bytxt"><i class="from">NS</i></span>
+                                    <p><a href="#emp" class="for emp">@bharat</a> sprint report designs looks AWESOME!! very very goog work. <span class="mention">#Kunal.soni, #rahul.dewan, #akash.bhawra, #shash</span></p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+4</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">Yesterday</span>
+                                    <span class="bytxt"><i class="from">SJ</i></span>
+                                    <p>Excellent <a href="#emp" class="for emp">@bharat</a> can we run this for some other key landing pages as well ?<span class="mention">#semad, #HR, #admin</span></p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">2 days ago</span>
+                                    <span class="bytxt"><i class="from">SL</i></span>
+                                    <p><a href="#emp" class="for emp">@bharat</a> you did great work in srijan.net designing and prototyping. always keen to learn new things and you are good in designing and frontend <span class="mention">#HR, #semad, #shash, #rahul.dewan</span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#"><i class="material-icons">perm_media</i></a>
+                                    <a href=""><i class="fa fa-group"></i>+4</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">10 days ago</span>
+                                    <span class="bytxt"><i class="from from_img"><img src="assets/images/photo.jpg"></i></span>
+                                    <p><a href="#emp" class="for emp">@bharat</a> sir, the crain deck looks AWESOME!! very very goog work. <span class="mention">#gaurav.mishra, #rahul.dewan</span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">1 month ago</span>
+                                    <span class="bytxt"><i class="from">NS</i></span>
+                                    <p><a href="#emp" class="for emp">@bharat</a> sprint report designs looks AWESOME!! very very goog work. <span class="mention">#Kunal.soni, #rahul.dewan, #akash.bhawra, #shash</span></p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+4</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">Yesterday</span>
+                                    <span class="bytxt"><i class="from">SJ</i></span>
+                                    <p>Excellent <a href="#emp" class="for emp">@bharat</a> can we run this for some other key landing pages as well ?<span class="mention">#semad, #HR, #admin</span></p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">2 days ago</span>
+                                    <span class="bytxt"><i class="from">SL</i></span>
+                                    <p><a href="#emp" class="for emp">@bharat</a> sprint report designs looks AWESOME!! very very good work. <span class="mention">#HR, #semad, #shash, #rahul.dewan</span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#"><i class="material-icons">perm_media</i></a>
+                                    <a href=""><i class="fa fa-group"></i>+4</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">10 days ago</span>
+                                    <span class="bytxt"><i class="from from_img"><img src="assets/images/photo.jpg"></i></span>
+                                    <p><a href="#emp" class="for emp">@bharat</a> the crain deck looks AWESOME!! very very goog work. <span class="mention">#gaurav.mishra, #rahul.dewan</span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">1 month ago</span>
+                                    <span class="bytxt"><i class="from">NS</i></span>
+                                    <p><a href="#emp" class="for emp">@bharat</a> sprint report designs looks AWESOME!! very very goog work. <span class="mention">#Kunal.soni, #rahul.dewan, #akash.bhawra, #shash</span></p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+4</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="public-feed" class="main col s12">
+            <div class="feeds received">
+                <!-- <h3>For me</h3> -->
+                <div class="row">
+                    <div class="col s6 new">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">Today</span>
+                                    <span class="bytxt"><i class="from from_img"><img src="assets/images/photo.jpg"></i></span>
+                                    <p><a href="#emp" class="for emp">@sumeet</a> the crain deck looks AWESOME!! very very goog work. <span class="mention"></span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#"><i class="material-icons">perm_media</i></a>
+                                    <!-- <a href=""><i class="fa fa-group"></i>+2</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">Yesterday</span>
+                                    <span class="bytxt"><i class="from">SJ</i></span>
+                                    <p>Excellent <a href="#emp" class="for emp">@Pooja</a> can we run this for some other key landing pages as well ?<span class="mention">#HR</span></p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+1</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">2 days ago</span>
+                                    <span class="bytxt"><i class="from">SL</i></span>
+                                    <p><a href="#emp" class="for emp">@bharat</a> Srijan Feedback App design and prototype is looking good.<span class="mention">#semad, Rahul</span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#"><i class="material-icons">perm_media</i></a>
+                                    <a href=""><i class="fa fa-group"></i>+2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">10 days ago</span>
+                                    <span class="bytxt"><i class="from from_img"><img src="assets/images/photo.jpg"></i></span>
+                                    <p><a href="#emp" class="for emp">@shash</a> sir, the crain deck looks AWESOME!! very very goog work. <span class="mention"></span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <!-- <a href=""><i class="fa fa-group"></i>+2</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">1 month ago</span>
+                                    <span class="bytxt"><i class="from">NS</i></span>
+                                    <p><a href="#emp" class="for emp">@bharat</a> sprint report designs looks AWESOME!! very very goog work. <span class="mention"></span></p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <!-- <a href=""><i class="fa fa-group"></i>+4</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">Yesterday</span>
+                                    <span class="bytxt"><i class="from">SJ</i></span>
+                                    <p>Excellent <a href="#emp" class="for emp">@deepak</a> can we run this for some other key landing pages as well ?<span class="mention"></span></p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <!-- <a href=""><i class="fa fa-group"></i>+2</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">2 days ago</span>
+                                    <span class="bytxt"><i class="from">SL</i></span>
+                                    <p><a href="#emp" class="for emp">@bharat</a> you did great work in srijan.net designing and prototyping. always keen to learn new things and you are good in designing and frontend <span class="mention"></span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#"><i class="material-icons">perm_media</i></a>
+                                    <!-- <a href=""><i class="fa fa-group"></i>+4</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">10 days ago</span>
+                                    <span class="bytxt"><i class="from from_img"><img src="assets/images/photo.jpg"></i></span>
+                                    <p><a href="#emp" class="for emp">@kapil</a> the crain deck looks AWESOME!! very very goog work. <span class="mention"></span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <!-- <a href=""><i class="fa fa-group"></i>+2</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">1 month ago</span>
+                                    <span class="bytxt"><i class="from">NS</i></span>
+                                    <p><a href="#emp" class="for emp">@bharat</a> sprint report designs looks AWESOME!! very very goog work. <span class="mention"></span></p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <!-- <a href=""><i class="fa fa-group"></i>+4</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">Yesterday</span>
+                                    <span class="bytxt"><i class="from">SJ</i></span>
+                                    <p>Excellent <a href="#emp" class="for emp">@suhail</a> can we run this for some other key landing pages as well ?<span class="mention"></span></p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <!-- <a href=""><i class="fa fa-group"></i>+2</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">2 days ago</span>
+                                    <span class="bytxt"><i class="from">SL</i></span>
+                                    <p><a href="#emp" class="for emp">@bharat</a> sprint report designs looks AWESOME!! very very good work. <span class="mention"></span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#"><i class="material-icons">perm_media</i></a>
+                                    <!-- <a href=""><i class="fa fa-group"></i>+4</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">10 days ago</span>
+                                    <span class="bytxt"><i class="from from_img"><img src="assets/images/photo.jpg"></i></span>
+                                    <p><a href="#emp" class="for emp">@bharat</a> the crain deck looks AWESOME!! very very goog work. <span class="mention"></span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <!-- <a href=""><i class="fa fa-group"></i>+2</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">1 month ago</span>
+                                    <span class="bytxt"><i class="from">NS</i></span>
+                                    <p><a href="#emp" class="for emp">@bharat</a> sprint report designs looks AWESOME!! very very goog work. <span class="mention"></span></p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <!-- <a href=""><i class="fa fa-group"></i>+4</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="edit-section">
+        <div class="col s12 edit-feed">
+            <div contenteditable="true" id="edit_me"><span class="for emp">@Shash</span> sir, the crain deck looks AWESOME!! very very goog work. <span class="mention">#gaurav.mishra, #rahul.dewan</span> </div>
+        <div class="actions">
+            <img class="materialboxed" src="assets/images/2.png">
+            <div class="switch visibility">
+                <label>
+                    <!-- Public -->
+                    <input type="checkbox">
+                    <span class="lever"></span>
+                    <!-- Private -->
+                </label>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="share-section">
+        <div class="col s12 edit-feed">
+        <form>
+            <div class="chips chips-initial"></div>
+        </form>
+    </div>
+    </section>
+    <section class="emp-section">
+        <!-- My Received Feeds -->
+        <div id="recived-feed" class="main col s12">
+            <div class="feeds emp">
+                <!-- <h3>For me</h3> -->
+                <div class="my_cmnt">
+                    <p>Only your comments</p>
+                    <div class="switch" id="onlyme">
+                        <label>
+                            <input type="checkbox">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row" id="comments">
+                    <div class="col s6 you">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">Today</span>
+                                    <span class="bytxt"><i class="from from_img"><img src="assets/images/photo.jpg"></i></span>
+                                    <p><span class="for">@bharat</span> sir, the crain deck looks AWESOME!! very very goog work. <span class="mention">#gaurav.mishra, #rahul.dewan</span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#"><i class="material-icons">perm_media</i></a>
+                                    <a href=""><i class="fa fa-group"></i>+2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">Yesterday</span>
+                                    <span class="bytxt"><i class="from">SJ</i></span>
+                                    <p>Excellent <span class="for">@bharat</span> can we run this for some other key landing pages as well ?<span class="mention">#semad, #HR, #admin</span></p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">2 days ago</span>
+                                    <span class="bytxt"><i class="from">SL</i></span>
+                                    <p>Excellent <span class="for">@bharat</span> can we run this for some other key landing pages as well ?<span class="mention">#semad, #HR, #admin</span></p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#"><i class="material-icons">perm_media</i></a>
+                                    <a href=""><i class="fa fa-group"></i>+4</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6 you">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">10 days ago</span>
+                                    <span class="bytxt"><i class="from from_img"><img src="assets/images/photo.jpg"></i></span>
+                                    <p><span class="for">@bharat</span> sir, the crain deck looks AWESOME!! very very goog work. <span class="mention">#gaurav.mishra, #rahul.dewan</span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">1 month ago</span>
+                                    <span class="bytxt"><i class="from">NS</i></span>
+                                    <p><span class="for">@bharat</span> sprint report designs looks AWESOME!! very very goog work. <span class="mention">#Kunal.soni, #rahul.dewan, #akash.bhawra, #shash</span></p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+4</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">Yesterday</span>
+                                    <span class="bytxt"><i class="from">SJ</i></span>
+                                    <p>Excellent <span class="for">@bharat</span> can we run this for some other key landing pages as well ?<span class="mention">#semad, #HR, #admin</span></p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">2 days ago</span>
+                                    <span class="bytxt"><i class="from">SL</i></span>
+                                    <p><span class="for">@bharat</span> sir, the crain deck looks AWESOME!! very very goog work. <span class="mention">#gaurav.mishra, #rahul.dewan</span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#"><i class="material-icons">perm_media</i></a>
+                                    <a href=""><i class="fa fa-group"></i>+4</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6 you">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">10 days ago</span>
+                                    <span class="bytxt"><i class="from from_img"><img src="assets/images/photo.jpg"></i></span>
+                                    <p><span class="for">@bharat</span> sir, the crain deck looks AWESOME!! very very goog work. <span class="mention">#gaurav.mishra, #rahul.dewan</span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">1 month ago</span>
+                                    <span class="bytxt"><i class="from">NS</i></span>
+                                    <p><span class="for">@bharat</span> sprint report designs looks AWESOME!! very very goog work. <span class="mention">#Kunal.soni, #rahul.dewan, #akash.bhawra, #shash</span></p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+4</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">Yesterday</span>
+                                    <span class="bytxt"><i class="from">SJ</i></span>
+                                    <p>Excellent <span class="for">@bharat</span> can we run this for some other key landing pages as well ?<span class="mention">#semad, #HR, #admin</span></p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">2 days ago</span>
+                                    <span class="bytxt"><i class="from">SL</i></span>
+                                    <p><span class="for">@bharat</span> sprint report designs looks AWESOME!! very very goog work. <span class="mention">#Kunal.soni, #rahul.dewan, #akash.bhawra, #shash</span></p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#"><i class="material-icons">perm_media</i></a>
+                                    <a href=""><i class="fa fa-group"></i>+4</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6 you">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">10 days ago</span>
+                                    <span class="bytxt"><i class="from from_img"><img src="assets/images/photo.jpg"></i></span>
+                                    <p><span class="for">@bharat</span> sir, the crain deck looks AWESOME!! very very goog work. <span class="mention">#gaurav.mishra, #rahul.dewan</span> </p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card horizontal">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <span class="date">1 month ago</span>
+                                    <span class="bytxt"><i class="from">NS</i></span>
+                                    <p><span class="for">@bharat</span> sprint report designs looks AWESOME!! very very goog work. <span class="mention">#Kunal.soni, #rahul.dewan, #akash.bhawra, #shash</span></p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <a href="#"><i class="material-icons">perm_media</i></a> -->
+                                    <a href=""><i class="fa fa-group"></i>+4</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+    <!-- vendor library -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <!-- Autocomplete js -->
+    <script src="assets/js/jquery.easy-autocomplete.js"></script>
+    <!-- Materialize js -->
+    <script src="assets/js/materialize.js"></script>
+    <!-- inview JS -->
+    <script src="assets/js/jquery.inview.min.js"></script>
+    <!-- custom js -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
